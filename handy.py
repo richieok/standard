@@ -18,7 +18,7 @@ def mapFolder(location):
     m = []
     for folder, subs, files in os.walk(location):
         for sub in subs:
-            m.append({os.path.join(folder,sub):"Folder"})
+            m.append({os.path.join(folder,sub):False})
         for f in files:
-            m.append({os.path.join(folder,f):"File"})
+            m.append({os.path.join(folder,f):False})
     return m
