@@ -5,9 +5,9 @@ from configparser import ConfigParser
 class QuitException(Exception):
     pass
 
-def testQuit(response):
+def testQuit(display_msg):
     '''Raises QuitException when input == "quit"'''
-    temp = input(response)
+    temp = input(display_msg)
     qmo = re.search(r'^quit$', temp, re.I)
     if qmo:
         raise QuitException("Quit")
